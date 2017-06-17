@@ -12,7 +12,7 @@ def ispalindrome(number):
     palindrome = 0
 
     if isinstance(number, int):
-        while number != 0:
+        while number > 0:
             remainder = number % 10
             palindrome = palindrome * 10 + remainder
             number = number // 10
