@@ -31,7 +31,7 @@ def largest_palindrome():
     large_palindrome = 0
     for i in range(100, 1000):
         for j in range(100, 1000):
-            if ispalindrome(multiply(i, j)):
+            if ispalindrome(multiply(i, j)) and multiply(i,j) > large_palindrome:
                 large_palindrome = multiply(i, j)
 
     return large_palindrome
