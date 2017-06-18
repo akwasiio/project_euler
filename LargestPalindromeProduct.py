@@ -12,7 +12,7 @@ def ispalindrome(number):
     palindrome = 0
 
     if isinstance(number, int):
-        while number != 0:
+        while number > 0:
             remainder = number % 10
             palindrome = palindrome * 10 + remainder
             number = number // 10
@@ -31,7 +31,7 @@ def largest_palindrome():
     large_palindrome = 0
     for i in range(100, 1000):
         for j in range(100, 1000):
-            if ispalindrome(multiply(i, j)):
+            if ispalindrome(multiply(i, j)) and multiply(i,j) > large_palindrome:
                 large_palindrome = multiply(i, j)
 
     return large_palindrome
