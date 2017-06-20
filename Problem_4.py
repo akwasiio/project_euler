@@ -8,18 +8,11 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 
 def ispalindrome(number):
-    check = number
-    palindrome = 0
-
-    if isinstance(number, int):
-        while number > 0:
-            remainder = number % 10
-            palindrome = palindrome * 10 + remainder
-            number = number // 10
-        if palindrome == check:
-            return True
-
-    return False
+    string_num = str(number)
+    if string_num == string_num[::-1]:
+        return True
+    else:
+        return False
 
 
 def multiply(num1, num2):
